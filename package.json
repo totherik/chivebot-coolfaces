@@ -10,9 +10,6 @@
   "author": "",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "peerDependencies": {
-    "chivebot": "git://github.com/totherik/chivebot.git"
-  },
   "dependencies": {
     "cool-ascii-faces": "~1.3.2"
   }
