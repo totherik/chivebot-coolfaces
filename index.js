@@ -14,7 +14,7 @@ module.exports = {
 
         plugin.dependency('chivebot', function (plugin, next) {
 
-            plugin.plugins.chivebot.registerCommand('lives!', function (data, cb) {
+            plugin.plugins.chivebot.registerCommand('lives!', function (raw, args, cb) {
                 cb(null, cool());
             });
 
