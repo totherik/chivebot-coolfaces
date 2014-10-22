@@ -1,29 +1,24 @@
 'use strict';
 
-var pkg = require('./package'),
-    cool = require('cool-ascii-faces');
+var Package = require('./package');
+var Cool = require('cool-ascii-faces');
 
 
-module.exports = {
-
-    name: pkg.name,
-
-    version: pkg.version,
-
-    register: function (plugin, options, next) {
+exports.register = function (plugin, options, next) {
 
         plugin.dependency('chivebot', function (plugin, next) {
 
             plugin.plugins.chivebot.registerCommand('lives!', function (raw, args, cb) {
-                cb(null, cool());
+                cb(null, Cool());
             });
 
             next();
-
         });
 
         next();
+};
 
-    }
 
+exports.register.attributes = {
+    pkg: Package
 };
